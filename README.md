@@ -1,2 +1,3 @@
 # pf2
-# testing this new repo
+
+Building a new home for myself on svelte. 
