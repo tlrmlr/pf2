@@ -1,8 +1,4 @@
 <script>
-    import App from "./App.svelte";
-
-
-    // your script goes here
     function Project(date, title, description, client){
         this.date = date;
         this.title = title;
@@ -44,7 +40,7 @@
             url: "https://www.vimcal.com"
         },
         {
-            name: "Rabbit Hole",
+            name: "RabbitHole",
             url: "https://rabbithole.gg"
         }
     ]
@@ -54,152 +50,140 @@
         date: 2013,
         title: "Product Design",
         description: "Cross-platform chat applications",
-        client: clientArray[1].name,
-        url: clientArray[1].url
+        client: clientArray[1].name
      },
      {
         date: 2014,
         title: "Product Design",
         description: "Chat SDK for mobile applications",
-        client: clientArray[1].name,
-        url: clientArray[1].url
+        client: clientArray[1].name
      },
      {
         date: 2014,
         title: "Product Design",
         description: "iOS application for water resource management",
-        client: clientArray[2].name,
-        url: clientArray[2].url
+        client: clientArray[2].name
      },
      {
         date: 2015,
         title: "Product Design",
         description: "Chat SDK for mobile applications",
-        client: clientArray[1].name,
-        url: clientArray[1].url
+        client: clientArray[1].name
      },
      {
         date: 2016,
         title: "Product Design",
         description: "Chatbots for mobile applications",
-        client: clientArray[1].name,
-        url: clientArray[1].url
+        client: clientArray[1].name
      },
      {
         date: 2017,
         title: "Product Design",
         description: "Cross-platform design systems for news applications",
-        client: clientArray[1].name,
-        url: clientArray[1].url
+        client: clientArray[1].name
      },
      {
         date: 2018,
         title: "Website Design",
-        description: "Branded website design",
-        client: clientArray[3].name,
-        url: clientArray[3].url
+        description: "Web3 play-to-earn platform",
+        client: clientArray[3].name
      },
      {
         date: 2018,
         title: "Product Design",
         description: "Web design for syndicated content library",
-        client: clientArray[4].name,
-        url: clientArray[4].url
+        client: clientArray[4].name
      },
      {
         date: 2019,
         title: "Product Design",
         description: "Cross-platform application design for Pocket",
-        client: clientArray[4].name,
-        url: clientArray[4].url
+        client: clientArray[4].name
      },
      {
         date: 2020,
         title: "Product Design",
         description: "Cross-platform application design for Firefox browser",
-        client: clientArray[4].name,
-        url: clientArray[4].url
+        client: clientArray[4].name
      },
      {
         date: 2020,
         title: "Research",
         description: "Exploration into content use patterns online",
-        client: clientArray[4].name,
-        url: clientArray[4].url
+        client: clientArray[4].name
      },
      {
         date: 2020,
         title: "Branding",
         description: "Web3 community staking game",
-        client: clientArray[5].name,
-        url: clientArray[5].url
+        client: clientArray[5].name
      },
      {
         date: 2020,
         title: "Character Design",
         description: "Web3 game avatars",
-        client: clientArray[5].name,
-        url: clientArray[5].url
+        client: clientArray[5].name
      },
      {
         date: 2021,
         title: "Product Design",
         description: "Web3 web application for DAOs",
-        client: clientArray[5].name,
-        url: clientArray[5].url
+        client: clientArray[5].name
      },
      {
         date: 2021,
         title: "Product Design",
         description: "Web3 web application for content aggregation",
-        client: clientArray[6].name,
-        url: clientArray[6].url
+        client: clientArray[6].name
      },
      {
         date: 2021,
         title: "Branding",
         description: "Cross-platform calendar application",
-        client: clientArray[7].name,
-        url: clientArray[7].url
+        client: clientArray[7].name
      },
      {
         date: 2021,
         title: "Product Design",
         description: "Mobile calendar & scheduling application",
-        client: clientArray[7].name,
-        url: clientArray[7].url
+        client: clientArray[7].name
      },
      {
         date: 2022,
         title: "Product Design",
         description: "Mobile video chat application for communities",
-        client: clientArray[0].name,
-        url: clientArray[0].url
+        client: clientArray[0].name
 
      },
      {
         date: 2022,
         title: "Character Design",
         description: "NFTs for course participation",
-        client: clientArray[8].name,
-        url: clientArray[8].url
+        client: clientArray[8].name
      },
      {
         date: 2022,
         title: "Product Design",
         description: "Mobile rewards application for creator communities",
-        client: clientArray[0].name,
-        url: clientArray[0].url
+        client: clientArray[0].name
      }
     ]
 
     let workArraySorted = workArray.reverse();
+    let workArrayProps = Object.keys(workArray[0]);
 </script>
 
 <style>
-   table {border-collapse: collapse;}
-
-   tr:nth-child(odd) {background-color: rgba(0,0,0,0.2);}
+   table {
+      border-collapse: collapse; 
+      width: 100%;
+   }
+   thead {opacity: 0.4;}
+   tr:nth-child(even) {background-color: rgba(255,255,255,0.02);}
+   .row-work:hover {
+      background-color: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,1.0)
+   }
    tr {
       height: 64px;
       justify-content: center;
@@ -213,10 +197,13 @@
    }
 </style>
 
-<!-- markup (zero or more items) goes here -->
 <table>
     <thead>
-
+      <tr>
+         {#each workArrayProps as prop}
+            <td>{prop.charAt(0).toUpperCase() + prop.slice(1)}</td>
+         {/each}
+      </tr>
     </thead>
     <tbody>
          {#each workArraySorted as work}
