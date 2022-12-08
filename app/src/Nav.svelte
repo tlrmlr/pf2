@@ -12,6 +12,21 @@
 
     let chosenExpression = chooseExpression();
 
+    let navArray = [
+        {
+            name: "Home",
+            path: ""
+        },
+        {
+            name: "Writing",
+            path: ""
+        },
+        {
+            name: "Projects",
+            path: ""
+        }
+    ]
+
 </script>
 
 <style>
@@ -45,20 +60,36 @@
 
     nav {display: flex;}
     nav {flex-direction: row-reverse;}
-    .navlinks li:last-child {margin-right: 0;}
 
     .navlinks {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
+        gap: 8px;
         margin-block-end: 0;
         margin-block-start: 0;
-        margin-top: 1px;
+        margin-top: 2px;
     }
     
     .navlinks li {
         list-style: none;
         font-weight: 500;
+        padding: 4px 16px;
+        border-radius: 4px;
+        background: linear-gradient(160deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005) 40%);
+    }
+
+    .navlinks li a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    .navlinks li:hover {
+        background: rgba(255,255,255,0.04);
+        transform: scale(1.01);
+    }
+
+    .navlinks li:hover a {
+        color: rgba(255,255,255,1.0)
     }
 </style>
 
@@ -71,9 +102,9 @@
     <nav>
         <button id="menu-hamburger">Reveal</button>
         <ul class="navlinks">
-            <li>Home</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            {#each navArray as link}
+                <li><a href="">{link.name}</a></li>
+            {/each}
         </ul>
     </nav>
 </header>

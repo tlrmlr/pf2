@@ -195,6 +195,12 @@
       padding-right: 16px;
       text-align: right;
    }
+   td:nth-child(3) {
+      white-space: nowrap; 
+      text-overflow:ellipsis; 
+      overflow: hidden; 
+      max-width:200px;
+   }
 </style>
 
 <table>
