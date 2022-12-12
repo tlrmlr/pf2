@@ -1,49 +1,44 @@
 <script>
-    function Project(date, title, description, client){
-        this.date = date;
-        this.title = title;
-        this.description = description;
-        this.client = client;
-    }
+   import { fly } from "svelte/transition";
 
-    let clientArray = [
-        {
-            name: "Confidential",
-            url: ""
-        },
-        {
-            name: "Frankly",
-            url: "https://www.franklymedia.com"
-        },
-        {
-            name: "CodePath",
-            url: "https://www.codepath.org"
-        },
-        {
-            name: "Refereum",
-            url: "https://refereum.com"
-        },
-        {
-            name: "Mozilla",
-            url: "https://www.mozilla.org/"
-        },
-        {
-            name: "Mochi",
-            url: "https://mochi.game"
-        },
-        {
-            name: "Cabin",
-            url: "https://www.cabin.city"
-        },
-        {
-            name: "Vimcal",
-            url: "https://www.vimcal.com"
-        },
-        {
-            name: "RabbitHole",
-            url: "https://rabbithole.gg"
-        }
-    ]
+   let clientArray = [
+      {
+         name: "Confidential",
+         url: ""
+      },
+      {
+         name: "Frankly",
+         url: "https://www.franklymedia.com"
+      },
+      {
+         name: "CodePath",
+         url: "https://www.codepath.org"
+      },
+      {
+         name: "Refereum",
+         url: "https://refereum.com"
+      },
+      {
+         name: "Mozilla",
+         url: "https://www.mozilla.org/"
+      },
+      {
+         name: "Mochi",
+         url: "https://mochi.game"
+      },
+      {
+         name: "Cabin",
+         url: "https://www.cabin.city"
+      },
+      {
+         name: "Vimcal",
+         url: "https://www.vimcal.com"
+      },
+      {
+         name: "RabbitHole",
+         url: "https://rabbithole.gg"
+      }
+   ]
 
     let workArray = [
         {
@@ -167,19 +162,44 @@
         description: "Mobile rewards application for creator communities",
         client: clientArray[0].name
      }
-    ]
+   ]
 
-    let workArraySorted = workArray.reverse();
-    let workArrayProps = Object.keys(workArray[0]);
+   let workArraySorted = workArray.reverse();
+   let workArrayProps = Object.keys(workArray[0]);
 </script>
+
+<table>
+   <thead>
+     <tr>
+        {#each workArrayProps as prop}
+           <td>{prop.charAt(0).toUpperCase() + prop.slice(1)}</td>
+        {/each}
+     </tr>
+   </thead>
+   <tbody>
+        {#each workArraySorted as work, i}
+           <tr class="row-work" in:fly={{y: -2, delay: 15 * i  }}>
+              <td class="work-date">{work.date}</td>
+              <td class="work-title">{work.title}</td>
+              <td class="work-description">{work.description}</td>
+              <td class="work-client">{work.client}</td>
+           </tr>
+        {/each}
+   </tbody>
+</table>
 
 <style>
    table {
       border-collapse: collapse; 
       width: 100%;
+      min-width: 600px;
    }
-   thead {opacity: 0.4;}
-   tr:nth-child(even) {background-color: rgba(255,255,255,0.02);}
+   thead {
+      opacity: 0.4;
+   }
+   tr:nth-child(even) {
+      background-color: rgba(255,255,255,0.02);
+   }
    .row-work:hover {
       background-color: rgba(255,255,255,0.04);
       color: rgba(255,255,255,1.0)
@@ -189,10 +209,14 @@
       justify-content: center;
    }
 
-   td {text-align: left;}
-   td:first-child {padding-left: 16px;}
+   td {
+      text-align: left;
+   }
+   td:first-child {
+      padding-left: var(--padding);
+   }
    td:last-child {
-      padding-right: 16px;
+      padding-right: var(--padding);
       text-align: right;
    }
    td:nth-child(3) {
@@ -202,23 +226,3 @@
       max-width:200px;
    }
 </style>
-
-<table>
-    <thead>
-      <tr>
-         {#each workArrayProps as prop}
-            <td>{prop.charAt(0).toUpperCase() + prop.slice(1)}</td>
-         {/each}
-      </tr>
-    </thead>
-    <tbody>
-         {#each workArraySorted as work}
-            <tr class="row-work">
-               <td class="work-date">{work.date}</td>
-               <td class="work-title">{work.title}</td>
-               <td class="work-description">{work.description}</td>
-               <td class="work-client">{work.client}</td>
-            </tr>
-         {/each}
-    </tbody>
-</table>
