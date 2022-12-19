@@ -1,5 +1,5 @@
 <script>
-	import Table from "../Table.svelte";
+	import Table from "./ProjectTable.svelte";
 	import { fly } from "svelte/transition";
 </script>
 

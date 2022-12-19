@@ -88,8 +88,8 @@
 
 <ul>
     {#each samplesArray as sample, i}
-        <li href={sample.url} in:fly={{y: -8, delay: 40 * i  }}>
-            <a href="" target="_blank" rel="noreferrer">
+        <li href={sample.url} in:fly={{y: -8, delay: 60 * i  }}>
+            <a href="">
                 <img src={"/samples/" + sample.src} alt={sample.alt}>
                 <div class="info-box">
                     <span>{sample.date}</span>
@@ -114,7 +114,7 @@
 
     li {
         opacity: 0.4;
-        transition: opacity 300ms ease-in-out;
+        transition: opacity 200ms ease-in-out;
     }
 
     li:hover {
@@ -134,7 +134,7 @@
     }
 
     li:hover img {
-        box-shadow: 0px 0px 16px rgba(255,255,255,0.08);
+        box-shadow: 0px 0px 32px rgba(255,255,255,0.02);
     }
 
     li a {

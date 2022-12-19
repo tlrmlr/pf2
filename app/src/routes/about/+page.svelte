@@ -1,11 +1,56 @@
 <script>
 	import { fly } from "svelte/transition";
+	import AboutTable from "./AboutTable.svelte";
 </script>
 
 <article in:fly={{y: -2}}>
-	<h1>About</h1>
+	<div id="intro" class="a">
+		<h1>About</h1>
+		<p>Tyler is a multi-disciplinary designer building products & brands. Over the past decade, Tyler has focused on building cross-platform products that augment & empower small online communities.</p>
+	</div>
+	<img src="profile.jpeg" alt="A photo of the author" class="b">
+	<div id="table">
+		<AboutTable />
+	</div>
 </article>
 
 <style>
-	h1 {padding: 0px var(--padding);}
+	article {
+		margin-top: 0;	
+		display: grid;
+		/* grid-template-columns: 1fr 1fr; */
+		grid-template-areas: 
+			"a b" 
+			"c c";
+		gap: var(--padding);
+	}
+
+	h1 {
+		grid-column: 1 / span 2;
+	}
+	
+	img {	
+		height: 50vh;
+		object-fit: cover;
+		grid-column: span 1;
+		justify-self: end;
+	}
+
+	#intro {
+		margin-top: 21vh;
+		padding-left: var(--padding);
+	}
+
+	#table {
+		grid-area: c;
+		padding: 0px var(--padding);
+	}
+
+	.a {
+		grid-area: a;
+	}
+
+	.b {
+		grid-area: b;
+	}
 </style>

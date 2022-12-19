@@ -13,6 +13,6 @@
 		padding: 0px var(--padding);
 		display: grid;
 		grid-template-rows: min-content;
-		gap: 21vh;
+		gap: 27vh;
 	}
 </style>

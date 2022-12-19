@@ -178,7 +178,7 @@
    </thead>
    <tbody>
         {#each workArraySorted as work, i}
-           <tr class="row-work" in:fly={{y: -2, delay: 15 * i  }}>
+           <tr class="row-work" in:fly={{y: -2, delay: 40 * i  }}>
               <td class="work-date">{work.date}</td>
               <td class="work-title">{work.title}</td>
               <td class="work-description">{work.description}</td>
