@@ -5,7 +5,7 @@
     let storyList;
     Stories.subscribe((data) =>{
         storyList = data;
-    }); 
+    });
 </script>
 
 <article in:fly={{y: -2}}>
