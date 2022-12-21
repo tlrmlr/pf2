@@ -1,18 +1,15 @@
 <script>
     import { fly } from "svelte/transition";
-    import Stories from "../../../src/Store";
-
-    let storyList;
-    Stories.subscribe((data) =>{
-        storyList = data;
-    });
+    export let data;
 </script>
 
 <article in:fly={{y: -2}}>
     <h1>Writing</h1>
-    {#each storyList as story}
-         <a href="{"writing/" + story.slug}">{story.title}</a>
-    {/each}
+    <ul>
+        {#each data.summaries as { slug, title }}
+            <li><a href="/writing/{slug}">{title}</a></li>
+        {/each}
+    </ul>
 </article>
 
 <style>

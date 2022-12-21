@@ -1,8 +1,8 @@
-<script context="module">
-    /** @type {import('./$types').PageData} */
-  export let data;
-
+<script>
+	export let data;
 </script>
 
-<h1>Title</h1>
-<div>test</div>
+<article>
+	<h1>{data.post.title}</h1>
+	<div>{@html data.post.content}</div>
+</article>
