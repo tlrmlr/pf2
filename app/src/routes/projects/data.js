@@ -53,25 +53,31 @@ export const workArray = [
  {
     date: 2014,
     title: "Product Design",
+    description: "Design system for cross-platform chat SDK",
+    client: clientArray[1].name
+ },
+ {
+    date: 2014,
+    title: "Product Design",
     description: "iOS application for water resource management",
     client: clientArray[2].name
  },
  {
     date: 2015,
     title: "Product Design",
-    description: "Chat SDK for mobile applications",
+    description: "Cross-platform Chatbot",
     client: clientArray[1].name
  },
  {
     date: 2016,
     title: "Product Design",
-    description: "Chatbots for mobile applications",
+    description: "In-store chatbot w/ Uniqlo",
     client: clientArray[1].name
  },
  {
     date: 2017,
     title: "Product Design",
-    description: "Cross-platform design systems for news applications",
+    description: "Cross-platform design system for news applications",
     client: clientArray[1].name
  },
  {
@@ -101,7 +107,7 @@ export const workArray = [
  {
     date: 2020,
     title: "Research",
-    description: "Exploration into content use patterns online",
+    description: "Exploration of content use patterns online",
     client: clientArray[4].name
  },
  {
@@ -113,7 +119,7 @@ export const workArray = [
  {
     date: 2020,
     title: "Character Design",
-    description: "Web3 game avatars",
+    description: "Web3 game avatars & assets",
     client: clientArray[5].name
  },
  {
@@ -125,7 +131,7 @@ export const workArray = [
  {
     date: 2021,
     title: "Product Design",
-    description: "Web3 web application for content aggregation",
+    description: "Web3 application for content aggregation",
     client: clientArray[6].name
  },
  {
@@ -150,7 +156,7 @@ export const workArray = [
  {
     date: 2022,
     title: "Character Design",
-    description: "NFTs for course participation",
+    description: "NFT characters for course participation",
     client: clientArray[8].name
  },
  {
@@ -160,3 +166,5 @@ export const workArray = [
     client: clientArray[0].name
  }
 ]
+
+export const workArraySorted = workArray.reverse();

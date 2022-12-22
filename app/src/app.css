@@ -68,6 +68,12 @@ h1 {
   line-height: 48px;
   letter-spacing: -0.04em;
   color: rgba(255, 255, 255, 1);
+  margin-left: -2px;
+}
+
+h1.sticky {
+  position: sticky;
+  top: calc(var(--displacement-nav) + var(--padding));
 }
 
 h2 {

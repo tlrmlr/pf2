@@ -1,8 +1,8 @@
 <script>
-   import { clientArray, workArray } from './data.js';
+   import { workArraySorted, workArray } from './data.js';
    import { fly } from "svelte/transition";
+   import { quartOut } from 'svelte/easing';
 
-   let workArraySorted = workArray.reverse();
    let workArrayProps = Object.keys(workArray[0]);
 </script>
 
@@ -16,7 +16,7 @@
    </thead>
    <tbody>
         {#each workArraySorted as work, i}
-           <tr class="row-work" in:fly={{y: -2, delay: 40 * i  }}>
+           <tr class="row-work" in:fly={{y: -2, duration: 400, delay: 40 * i, easing: quartOut }}>
               <td class="work-date">{work.date}</td>
               <td class="work-title">{work.title}</td>
               <td class="work-description">{work.description}</td>

@@ -1,5 +1,5 @@
 <script>
- let descriptorArray = [
+    let descriptorArray = [
     {
         src: "",
         text: "Product designer exploring life online."

@@ -4,7 +4,7 @@
 </script>
 
 <article in:fly={{y: -2}}>
-	<h1>Projects</h1>
+	<h1 class="sticky">Projects</h1>
 	<Table />	
 </article>
 

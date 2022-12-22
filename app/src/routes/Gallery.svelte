@@ -1,94 +1,13 @@
 <script>
     import { fly } from "svelte/transition";
+    import { quartOut } from 'svelte/easing';
 
-    let samplesArray = [
-        {
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        },{
-            url: "Testing",
-            src: "test-img.png",
-            date: "9-10-22",
-            alt: "Musings on Moloch"
-        }
-    ]
+    import { samplesArray } from './data.js';
 </script>
 
 <ul>
     {#each samplesArray as sample, i}
-        <li href={sample.url} in:fly={{y: -8, delay: 60 * i  }}>
+        <li href={sample.url} in:fly={{y: -32, duration: 600, delay: 120 * i, easing: quartOut }}>
             <a href="">
                 <img src={"/samples/" + sample.src} alt={sample.alt}>
                 <div class="info-box">

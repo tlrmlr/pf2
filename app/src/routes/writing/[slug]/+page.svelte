@@ -19,7 +19,7 @@
 		color: rgba(255,255,255,1.0);
 		padding: 0 var(--padding);
         display: grid;
-        grid-template-columns: var(--rag) 1fr;
+        grid-template-columns: 1fr var(--rag);
         gap: 32px;
 	}
 

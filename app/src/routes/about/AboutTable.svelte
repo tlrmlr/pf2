@@ -27,21 +27,23 @@
 
 <style>
     section {
-        border-bottom: var(--material-edge);
+        border-top: var(--material-edge);
         display: grid;
-        gap: 48px;
+        gap: 64px;
         grid-template-columns: 1fr 1fr;
         justify-content: start;
-        padding-bottom: 32px;
+        padding-top: 16px;
+        transition: color 200ms ease-in-out;
     }
-
-    section:last-child {
-        border: none;
-    }
-
-    section:hover li {
+    
+    section:hover li, section:hover h2 {
         color: rgba(255,255,255,1.0);
         transition: color 60ms ease-in-out;
+    }
+
+    ol {
+        display: grid;
+        gap: 4px;
     }
 
     li {
@@ -62,6 +64,6 @@
 
     .grid {
         display: grid;
-        gap: 32px;
+        gap: 64px;
     }
 </style>
