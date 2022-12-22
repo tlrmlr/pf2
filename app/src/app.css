@@ -20,6 +20,7 @@
   --material-edge: 1px solid rgba(255,255,255,0.03);
   --displacement-nav: 48px;
   --padding: 48px;
+  --rag: 36em;
 }
 
 * {
@@ -86,7 +87,7 @@ h3 {
 p {
   margin: 0;
   padding: 0;
-  max-width: 36em;
+  max-width: var(--rag);
   font-size: 16px;
   line-height: 22px;
   letter-spacing: -0.005em;
@@ -94,6 +95,15 @@ p {
 
 ul, ol {
   list-style: none;
+}
+
+a {
+  color: rgba(255,255,255,1.0);
+  text-decoration: underline;
+}
+
+a:hover, a:visited, a:focus, a:focus-visible {
+  color: rgba(255,255,255,0.5);
 }
 
 /* ***** Other Elements ***** */

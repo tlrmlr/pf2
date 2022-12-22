@@ -1,64 +1,6 @@
 <script>
     import { fly } from "svelte/transition";
-
-    let aboutArray = [
-        {
-            title: "Services",
-            data: [
-                "Product Design",
-                "User Experience Design",
-                "Interface Design",
-                "Brand Design",
-                "Character Design",
-                "Environment Design"
-            ]
-        },{
-            title: "Tools",
-            data: [
-                "Figma",
-                "Adobe Suite",
-                "Blender",
-                "JS/HTML/CSS",
-                "Svelte/Vue/React"
-            ]
-        },{
-            title: "Experience",
-            data: [
-                {
-                    subject: 'Co-founder',
-                    title: "Mochi",
-                    date: "Current"
-                },
-                {
-                    subject: 'Product Design',
-                    title: "Mozilla",
-                    date: "2018-2021"
-                },
-                {
-                    subject: 'Product Design',
-                    title: "Frankly",
-                    date: "2013-2018"
-                }
-            ]
-        },{
-            title: "Education",
-            data: [
-                {
-                    subject: "Prototyping",
-                    title: "CodePath",
-                    date: "2014"
-                },{
-                    subject: "Interaction Design",
-                    title: "SAIC",
-                    date: "2013"
-                },{
-                    subject: "Graphic Design",
-                    title: "UIUC",
-                    date: "2009-2013"
-                }
-            ]
-        }
-    ]
+    import { aboutArray } from './data.js';
 </script>
 
 <div class="grid">
@@ -68,7 +10,12 @@
             <ol>
                 {#each section.data as item}
                     {#if typeof item === 'object'}
-                         <li><span>{item.subject} <span style="color: rgba(255,255,255,0.4)">@</span> {item.title}</span><hr><span>{item.date}</span></li>
+                         <li>
+                            <span>{item.subject} 
+                                <span style="color: rgba(255,255,255,0.4)">@</span>{item.title}
+                            </span>
+                            <hr>
+                            <span>{item.date}</span></li>
                     {:else}
                         <li>{item}</li>
                     {/if}

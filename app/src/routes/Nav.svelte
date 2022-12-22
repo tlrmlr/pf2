@@ -18,7 +18,7 @@
 
 <header>
     <p id="logo">
-        <span id="wordmark">Tyler Miller</span>
+        <span id="wordmark"><a href="/">Tyler Miller</a></span>
         <span>is</span>
         <span>{chosenExpression}</span>
     </p>
@@ -34,7 +34,11 @@
 </header>
 
 <style>
-    #wordmark {color: rgba(255,255,255,1.0)}
+    #wordmark, #wordmark a, #wordmark a:hover {
+        color: rgba(255,255,255,1.0);
+        text-decoration: none;
+    }
+
     #logo {
         font-weight: 500;
     }
