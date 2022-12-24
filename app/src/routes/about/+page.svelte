@@ -18,7 +18,7 @@
 	article {
 		margin-top: 0;	
 		display: grid;
-		/* grid-template-columns: 1fr 1fr; */
+		grid-template-columns: 1fr 1fr;
 		grid-template-areas: 
 			"a b" 
 			"c c";
@@ -31,6 +31,7 @@
 	
 	img {	
 		height: 50vh;
+		width: 100%;
 		object-fit: cover;
 		grid-column: span 1;
 		justify-self: end;

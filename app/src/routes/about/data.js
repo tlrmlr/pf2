@@ -27,12 +27,12 @@ export const aboutArray = [
                 date: "Current"
             },
             {
-                subject: 'Product Design',
+                subject: 'Sr. Product Designer',
                 title: "Mozilla",
                 date: "2018-2021"
             },
             {
-                subject: 'Product Design',
+                subject: 'Product Designer',
                 title: "Frankly",
                 date: "2013-2018"
             }

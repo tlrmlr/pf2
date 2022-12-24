@@ -58,12 +58,11 @@
         height: var(--displacement-nav);
         justify-content: space-between;
         padding: 0px var(--padding);
-        /* background: linear-gradient(rgba(16,16,16,0.9) 40%, rgba(16,16,16,0.8) 60%, rgba(16,16,16,0.0));
-        text-shadow: 0px 0px 4px rgba(16,16,16,1.0); */
-        -webkit-backdrop-filter: blur(32px) saturate(250%);
-        backdrop-filter: blur(3px) saturate(250%);
         border-bottom: var(--material-edge);
         background-color: rgba(16,16,16,0.16);
+        
+        -webkit-backdrop-filter: blur(32px) saturate(250%);
+        backdrop-filter: blur(32px) saturate(250%);
     }
 
     nav {

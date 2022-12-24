@@ -29,11 +29,16 @@
     section {
         border-top: var(--material-edge);
         display: grid;
-        gap: 64px;
+        gap: var(--padding);
         grid-template-columns: 1fr 1fr;
         justify-content: start;
         padding-top: 16px;
         transition: color 200ms ease-in-out;
+    }
+    
+    section:first-child {
+        border: none;
+        padding-top: none;
     }
     
     section:hover li, section:hover h2 {
