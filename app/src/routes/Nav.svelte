@@ -1,13 +1,5 @@
 <script>
-    let expressionArray = [
-        "working in public.",
-        "playing games.",
-        "setting goals.",
-        "forming habits.",
-        "building interdependence.",
-        "dreaming big.",
-        "starting small."
-    ]
+    import { expressionArray } from './data.js';
 
     let chosenExpression = expressionArray[Math.floor(expressionArray.length*Math.random())];
 
@@ -18,17 +10,17 @@
 
 <header>
     <p id="logo">
-        <span id="wordmark"><a href="/">Tyler Miller</a></span>
+        <span id="wordmark"><a  on:click={chooseExpression} href="/">Tyler Miller</a></span>
         <span>is</span>
         <span>{chosenExpression}</span>
     </p>
     <nav>
         <button id="menu-hamburger">Reveal</button>
         <ul class="navlinks">
-            <li><a href="/">Gallery</a></li>
-            <li><a href="/writing">Writing</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a on:click={chooseExpression} href="/">Gallery</a></li>
+            <li><a on:click={chooseExpression} href="/writing">Writing</a></li>
+            <li><a on:click={chooseExpression} href="/projects">Projects</a></li>
+            <li><a on:click={chooseExpression} href="/about">About</a></li>
         </ul>
     </nav>
 </header>

@@ -1,6 +1,5 @@
 <script>
     import { samplesArray } from './data.js';
-
     let current = 0;
 </script>
 

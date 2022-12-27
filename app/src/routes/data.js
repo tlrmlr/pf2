@@ -81,3 +81,13 @@ export const samplesArray = [
         alt: "Musings on Moloch"
     }
 ]
+
+export const expressionArray = [
+    "working in public.",
+    "playing games.",
+    "setting goals.",
+    "forming habits.",
+    "building interdependence.",
+    "dreaming big.",
+    "starting small."
+]
