@@ -62,6 +62,7 @@
         display: flex;
         flex-direction: column;
         margin-top: 2vw;
+        line-height: 1rem;
     }
 
     a .info-box {
@@ -73,5 +74,22 @@
         height: 18vw;
         border: var(--material-edge);
         border-radius: 5px;
+        object-fit: cover;
+    }
+
+    @media (max-width: 700px) {
+        ul {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        a img {
+            height: 100%;
+        }
+    }
+
+    @media (max-width: 420px) {
+        ul {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 </style>

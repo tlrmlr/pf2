@@ -2,17 +2,12 @@
 	import Welcome from "./Welcome.svelte";
 	import { fly } from "svelte/transition";
 	import Gallery from "./Gallery.svelte";
-	import Carousel from "./Carousel.svelte";
-
-	let largeImage = false;
 </script>
+
 <article in:fly={{y: -2}}>
 	<Welcome />
 	<Gallery />
 </article>
-{#if largeImage}
-	<Carousel />
-{/if}
 
 <style>
 	article {

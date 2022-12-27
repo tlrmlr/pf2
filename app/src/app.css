@@ -12,7 +12,7 @@
   background-color: rgba(16,16,16,1.0);
 
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 0.018em;
   line-height: 1.5em;
   font-weight: 400;
@@ -94,7 +94,6 @@ p {
   margin: 0;
   padding: 0;
   max-width: var(--rag);
-  font-size: 18px;
   line-height: 22px;
   letter-spacing: -0.005em;
 }
@@ -133,10 +132,18 @@ a:hover, a:visited, a:focus, a:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --padding: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --padding: 12px;
   }
 }
