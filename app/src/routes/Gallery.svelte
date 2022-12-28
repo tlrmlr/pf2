@@ -12,7 +12,7 @@
                 <img src={"/samples/" + sample.src} alt={sample.alt}>
                 <div class="info-box">
                     <span>{sample.date}</span>
-                    <span>•</span>
+                    <span>·</span>
                     <span>{sample.alt}</span>
                 </div>
             </a>
@@ -90,6 +90,11 @@
     @media (max-width: 420px) {
         ul {
             grid-template-columns: repeat(1, 1fr);
+            gap: calc(2 * var(--padding));
+        }
+
+        li span {
+            color: rgba(255,255,255,1.0);
         }
     }
 </style>

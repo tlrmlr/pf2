@@ -73,4 +73,10 @@
         width: 100%;
         margin-top: 12px;
     }
+
+    @media (max-width: 700px) {
+		section {
+			grid-template-columns: 1fr;
+		}
+	}
 </style>

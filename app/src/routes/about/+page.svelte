@@ -23,6 +23,7 @@
 			"a b" 
 			"c c";
 		gap: var(--padding);
+		width: 100%;
 	}
 
 	h1 {
@@ -37,9 +38,14 @@
 		justify-self: end;
 	}
 
+	p {
+		width: 100%;
+	}
+
 	#intro {
 		margin-top: 21vh;
 		padding-left: var(--padding);
+		width: 100%;
 	}
 
 	#table {
@@ -53,5 +59,19 @@
 
 	.b {
 		grid-area: b;
+	}
+
+	@media (max-width: 700px) {
+		article {
+			grid-template-columns: 1fr;
+			grid-template-areas: 
+			"b"
+			"a"
+			"c";
+		}
+	}
+
+		@media (max-width: 420px) {
+		
 	}
 </style>

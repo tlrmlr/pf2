@@ -63,15 +63,4 @@
       overflow: hidden; 
       max-width:200px;
    }
-
-   @media (max-width: 420px) {
-      table {
-         width: 100vw;
-         overflow-x: scroll;
-      }
-
-      thead, tr {
-         min-width: 600px;
-      }
-   }
 </style>

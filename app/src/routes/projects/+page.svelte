@@ -5,9 +5,16 @@
 
 <article in:fly={{y: -2}}>
 	<h1 class="sticky">Projects</h1>
-	<Table />	
+	<div class="table-scroll">
+		<Table />	
+	</div>
 </article>
 
 <style>
 	h1 {padding: 0px var(--padding);}
+
+	.table-scroll {
+		width: 100vw;
+		overflow-x: scroll;
+	}
 </style>

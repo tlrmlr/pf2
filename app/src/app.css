@@ -26,6 +26,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* ***** Core Elements ***** */
@@ -130,11 +131,11 @@ a:hover, a:visited, a:focus, a:focus-visible {
 /* ***** Media Queries ***** */
 /* ***** Media Queries ***** */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     
   }
-}
+} */
 
 @media (max-width: 700px) {
   :root {

@@ -71,4 +71,14 @@
         display: grid;
         gap: 64px;
     }
+
+    @media (max-width: 700px) {
+		section {
+            grid-template-columns: 1fr;
+        }
+
+        section h2 {
+            color: rgba(255,255,255,1.0);
+        }
+	}
 </style>

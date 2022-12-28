@@ -32,6 +32,7 @@
     section {
         display: grid;
         gap: 16px;
+        width: 100%;
     }
     img {
 		width: 100%;
