@@ -23,7 +23,7 @@
         <span>{chosenExpression}</span>
     </p>
     <nav>
-        <button id="menu-hamburger" on:click={toggleMenu}>
+        <button class="menu-hamburger" on:click={toggleMenu}>
             <img src={Menu} alt=""/>
             <span>Menu</span>
         </button>
@@ -35,6 +35,10 @@
         </ul>
         {#if menuToggled === true}
             <ul class="mobilinks">
+                <li><button class="menu-hamburger" on:click={toggleMenu}>
+                    <img src={Menu} alt=""/>
+                    <span>Close</span>
+                </button></li>
                 <li><a on:click={toggleMenu} href="/">Gallery</a></li>
                 <li><a on:click={toggleMenu} href="/writing">Writing</a></li>
                 <li><a on:click={toggleMenu} href="/projects">Projects</a></li>
@@ -54,7 +58,7 @@
         font-weight: 500;
     }
 
-    #menu-hamburger {
+    .menu-hamburger {
         display: none;
         padding: none;
         margin: none;
@@ -67,17 +71,17 @@
         padding: 2px;
     }
 
-    #menu-hamburger span {
+    .menu-hamburger span {
         transition: border-bottom 100ms ease-in-out;
         font-size: 1em;
         border-bottom: 1px solid rgba(0,0,0,0);
     }
 
-    #menu-hamburger:hover {
+    .menu-hamburger:hover {
         cursor: pointer;
     }
 
-    #menu-hamburger:hover span {
+    .menu-hamburger:hover span {
         border-bottom: 1px solid white;
     }
 
@@ -94,7 +98,6 @@
         padding: 0px var(--padding);
         border-bottom: var(--material-edge);
         background-color: rgba(16,16,16,0.16);
-        
         -webkit-backdrop-filter: blur(32px) saturate(250%);
         backdrop-filter: blur(32px) saturate(250%);
     }
@@ -134,25 +137,42 @@
 
     .mobilinks {
         display: none;
-        grid-template-columns: repeat(1, min-content);
+        grid-template-rows: min-content repeat(4, 40px);
         gap: 32px;
         margin-block-end: 0;
         margin-block-start: 0;
+        width: 100%;
         position: absolute;
-        top: calc(var(--displacement-nav));
+        top: 0;
         bottom: 0;
-        left: calc(var(--padding));
+        left: 0;
         right: 0;
         color: white;
-        background: rgba(0,0,0,1.0);
+        height: 100vh;
         z-index: 10000;
+        padding: var(--padding);
+
+        background-color: rgba(16,16,16,0.16);
+        -webkit-backdrop-filter: blur(32px) saturate(250%);
+        backdrop-filter: blur(32px) saturate(250%);
+    }
+    
+    .mobilinks li:first-child {
+        width: 100%;
+        display: grid;
+        justify-content: end;
+    }
+
+    .mobilinks li a {
+        height: 100%;
+        width: 100%;
+    }
+
+    .mobilinks li:first-child .menu-hamburger {
+        margin-top: -2.5px;
     }
 
     @media (max-width: 700px) {
-        
-    }
-
-    @media (max-width: 420px) {
         #logo span {
             display: none;
         }
@@ -160,8 +180,11 @@
         #logo #wordmark {
             display: block;
         }
+    }
 
-        #menu-hamburger {
+    @media (max-width: 420px) {
+
+        .menu-hamburger {
             display: grid;
         }
 

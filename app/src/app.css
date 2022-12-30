@@ -21,6 +21,7 @@
   --displacement-nav: 48px;
   --padding: 48px;
   --rag: 32em;
+  --trans-padding: padding 160ms ease-in-out;
 }
 
 * {
@@ -56,6 +57,7 @@ body {
 
 article {
   margin: 21vh 0;
+  transition: var(--trans-padding);
 }
 
 /* ***** Text Elements ***** */

@@ -8,7 +8,7 @@
 		<h1>About</h1>
 		<p>Tyler is a multi-disciplinary designer building products & brands. Over the past decade, Tyler has focused on building cross-platform products that augment & empower small online communities.</p>
 	</div>
-	<img src="profile.jpeg" alt="A photo of the author" class="b">
+	<img src="profile.jpeg" alt="the author, Tyler Miller" class="b">
 	<div id="table">
 		<AboutTable />
 	</div>
@@ -45,12 +45,14 @@
 	#intro {
 		margin-top: 21vh;
 		padding-left: var(--padding);
+		transition: var(--trans-padding);
 		width: 100%;
 	}
 
 	#table {
 		grid-area: c;
 		padding: 0px var(--padding);
+		transition: var(--trans-padding);
 	}
 
 	.a {

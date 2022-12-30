@@ -52,10 +52,12 @@
    }
    td:first-child {
       padding-left: var(--padding);
+      transition: var(--trans-padding);
    }
    td:last-child {
       padding-right: var(--padding);
       text-align: right;
+      transition: var(--trans-padding);
    }
    td:nth-child(3) {
       white-space: nowrap; 
